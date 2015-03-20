@@ -5,13 +5,30 @@
 html {
 	font-family: Raleway, calibri, sans-serif;
 	font-size: 16px;
+  cursor: default;
 }
 
 section {
 	padding: 3em 3em;
+  /*background-color: #ffc04d;*/
+  transition: background-color .3s linear;
+
+  background: #ffc04d; /* Old browsers */
+  background: -moz-linear-gradient(left,  #ffc04d 0%, #ffae1a 40%, #ff6500 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffc04d), color-stop(40%,#ffae1a), color-stop(100%,#ff6500)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #ffc04d 0%,#ffae1a 40%,#ff6500 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #ffc04d 0%,#ffae1a 40%,#ff6500 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #ffc04d 0%,#ffae1a 40%,#ff6500 100%); /* IE10+ */
+  background: linear-gradient(to right,  #ffc04d 0%,#ffae1a 40%,#ff6500 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc04d', endColorstr='#ff6500',GradientType=1 ); /* IE6-9 */
 }
 
-section h1 {
+section.active {
+  /*background-color: #FA0;*/
+}
+
+section h1,
+section h2 {
 	font-size: 3em;
   font-weight: 500;
 }
@@ -19,10 +36,11 @@ section h1 {
 section p {
   font-weight: 100;
   font-size: 2em;
+  width: 500px;
 }
 
 .download-buttons a {
-  padding: 0.7em 1em;
+  padding: 0.7em 0.6em;
   margin: 0 5px;
   border-radius: 10px;
   font-weight: bold;
@@ -32,26 +50,29 @@ section p {
   text-shadow: 1px 1px 1px #111;
   transition: box-shadow .3s linear;
   display: inline-block;
+  border: 5px solid;
 }
 
 .download-buttons a.android {
   background: #a4c639;
+  border-color: #738b28;
 }
 
 .download-buttons a.windows-phone {
   background: #68217a;
+  border-color: #35113e;
 }
 
 .download-buttons a.ios {
   background: #8e8e93;
+  border-color: #68686d;
 }
 
 .download-buttons a:hover {
-  box-shadow: 0px 3px 6px #aaa;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .4);
 }
 
 .download-buttons a:active {
   box-shadow: none;
   transition: box-shadow .1s linear;
 }
-
