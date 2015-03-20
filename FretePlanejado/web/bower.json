@@ -1,0 +1,29 @@
+{
+  "name": "Site institucional do Frete Projetado",
+  "version": "0.0.0",
+  "homepage": "https://github.com/5devs/web-project-m1",
+  "authors": [
+    "Erik Zerbinatti <erikzerbinatti@gmail.com>",
+    "Gabriel Malaquias <gemalaquias@gmail.com>",
+    "Guilherme Ventura <guilhermeventura2@gmail.com>",
+    "Luiz Santos"
+  ],
+  "description": "Site institucional para promover o Frete Projetado",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "jquery": "~2.1.3"
+  },
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "jquery.onepage-scroll": "~1.1.10"
+  }
+}
