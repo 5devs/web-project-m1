@@ -53,6 +53,10 @@ section p {
   border: 5px solid;
 }
 
+.download-buttons a .fa {
+  padding-right: 5px;
+}
+
 .download-buttons a.android {
   background: #a4c639;
   border-color: #738b28;
@@ -75,4 +79,23 @@ section p {
 .download-buttons a:active {
   box-shadow: none;
   transition: box-shadow .1s linear;
+}
+
+#ao-vivo .map {
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+
+  transition: margin-top 1s linear, box-shadow 1s linear;
+}
+
+#ao-vivo.active .map {
+  margin-top: -70px;
+  box-shadow: 0 0 20px rgba(0,0,0,.3);
+}
+
+#ao-vivo.active .map:hover {
+  margin-top: -75px;
+  box-shadow: 0 0 25px rgba(0,0,0,.5);
 }
