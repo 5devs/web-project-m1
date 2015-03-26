@@ -45,7 +45,12 @@ section div.imagem {
   top: 20%;
   right: 5%;
 
+  width: 50%;
+}
+
+section div.imagem img {
   transition: margin 1s linear;
+  max-width: 100%;
 }
 
 .download-buttons a {
@@ -114,5 +119,5 @@ section div.imagem {
 }
 
   #para-transportadoras-intro.active .caminhao {
-    margin-left: -70px;
+    margin-right: 70px;
   }
