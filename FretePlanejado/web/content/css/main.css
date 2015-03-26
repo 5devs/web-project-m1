@@ -39,6 +39,15 @@ section p {
   width: 500px;
 }
 
+section div.imagem {
+  border-radius: 5px;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+
+  transition: margin 1s linear;
+}
+
 .download-buttons a {
   padding: 0.7em 0.6em;
   margin: 0 5px;
@@ -81,7 +90,7 @@ section p {
   transition: box-shadow .1s linear;
 }
 
-#rastreamento .map {
+#rastreamento .mapa {
   border-radius: 5px;
   position: absolute;
   top: 20%;
@@ -90,7 +99,20 @@ section p {
   transition: margin-top 1s linear, box-shadow 1s linear;
 }
 
-#rastreamento.active .map {
+#rastreamento.active .mapa {
   margin-top: -70px;
   box-shadow: 0 0 20px rgba(0,0,0,.3);
 }
+
+#para-transportadoras-intro .caminhao {
+  /*filter: FlipH;
+  -ms-filter: "FlipH";
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);*/
+}
+
+  #para-transportadoras-intro.active .caminhao {
+    margin-left: -70px;
+  }
