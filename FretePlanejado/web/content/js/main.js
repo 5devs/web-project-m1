@@ -1,4 +1,3 @@
-$(function(){
+$(function(){    
     $(".main").onepage_scroll();
-    
 })

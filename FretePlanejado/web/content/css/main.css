@@ -61,17 +61,57 @@ header {
 
   z-index: 1;
   text-align: right;
+
+  background: #9a009a;
 }
 
 header button {
   background-color: transparent;
   border: none;
-  line-height: 3em;
   padding: 0 1em;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 2px solid #b300b3;
+
+  transition: background-color .1s linear, border-color .1s linear;
+}
+
+header form {
+  display: inline;
+}
+
+header form input {
+  border: 0;
+  padding: 0 .5em;
+  width: 150px;
+  color: #000;
+}
+
+header .group {
+  white-space: nowrap;
+  display: inline;
+}
+
+header button,
+header label,
+header input {
+  color: #fff;
+  font-size: .8rem;
+  margin: .5em 0;
+  line-height: 2em;
 }
 
 header #login {
-  background-color: #009aff;
+  background-color: #b300b3;
+}
+
+  header #login:hover {
+    background-color: #cd00cd;
+    border-color: #cd00cd;
+  }
+
+header #signup:hover {
+  background-color: #b300b3;
 }
 
 .download-buttons a {
@@ -88,7 +128,6 @@ header #login {
   font-size: 1.2em;
   text-shadow: 1px 1px 1px #111;
   transition: box-shadow .3s linear;
-
 }
 
 .download-buttons a .fa {

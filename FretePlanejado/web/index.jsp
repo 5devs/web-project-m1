@@ -14,12 +14,27 @@
         <link href='http://fonts.googleapis.com/css?family=Raleway:700,100,400,200,300' rel='stylesheet' type='text/css'>
         <link href="bower_components/jquery.onepage-scroll/dist/jquery.onepage-scroll.css" rel="stylesheet"/>
         <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+        
+        <link rel="stylesheet" type="text/css" href="content/css/base.css">
         <link rel="stylesheet" type="text/css" href="content/css/main.css">
     </head>
     <body>
         <header>
             <div class="deslogado">
-                <button id="login">Log In</button>
+                <form id="login-form" action="/FretePlanejado/LoginServlet" method="post">
+                    <div class="group">
+                        <label for="username">Nome de Usuário:</label>
+                        <input id="username" name="login" type="text">
+                    </div>
+                    
+                    <div class="group">
+                        <label for="senha">Senha:</label>
+                        <input id="senha" name="senha" type="password">
+                    </div>
+                    
+                    <button id="login">Log In</button>
+                </form>
+
                 <button id="signup">Registrar</button>
             </div>
             <div class="logado">
