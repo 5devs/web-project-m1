@@ -112,7 +112,16 @@ header #login {
 
 header #signup:hover {
   background-color: #b300b3;
+
 }
+
+  header #login:hover {
+    background-color: #cd00cd;
+  }
+
+  header #signup:hover {
+    background-color: #b300b3;
+  }
 
 .download-buttons a {
   display: inline-block;
