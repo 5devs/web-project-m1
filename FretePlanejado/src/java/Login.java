@@ -80,7 +80,7 @@ public class Login extends HttpServlet {
             session.setAttribute("Login", usuario.getLogin());
             session.setAttribute("Senha", usuario.getSenha());
             session.setAttribute("Logado", usuario.getLogado());
-            response.sendRedirect("/FretePlanejado/Logado"); 
+            response.sendRedirect("/FretePlanejado/app.jsp"); 
         }else{
             session.setAttribute("Erro", "Usuario e/ou Senha Inválidos");
             response.sendRedirect("/FretePlanejado");

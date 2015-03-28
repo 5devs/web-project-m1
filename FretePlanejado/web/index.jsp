@@ -19,45 +19,7 @@
         <link rel="stylesheet" type="text/css" href="content/css/main.css">
     </head>
     <body>
-        <header>            
-                <%
-                
-                if(session.getAttribute("Logado") == null)
-                {
-                %>
-                <div class="deslogado">
-                <form id="login-form" action="/FretePlanejado/Login" <%=(session.getAttribute("Erro") != null)?"class='invalid'":""%> method="post">
-                    <label for="username">Nome de Usuário:</label>
-                    <input id="username" name="Login" type="text">
-                    
-                    <label for="senha">Senha:</label>
-                    <input id="senha" name="Senha" type="password">
-                    
-                    <button id="login">Log In</button>
-                </form>
-                
-                <button id="signup">Registrar</button>
-                
-                </div>
-                   
-                <%
-                
-                if(session.getAttribute("Erro") != null)
-                    session.setAttribute("Erro", null);
-                 
-                }//fim if logado
-                else
-                {
-                   %>
-                
-            <div class="logado">
-                <span id="username">Olá, Administrador! </span>
-                <a href="/FretePlanejado/Logout" class="button" id="logout">Log Out</a>
-            </div>
-                <%
-                }
-                %>
-        </header>
+        <jsp:include page="inc/header.jsp" />  
 
         <div class="main">
             <section id="apresentacao">
@@ -75,51 +37,60 @@
                 <p>Acessível de qualquer dispositivo, em qualquer lugar, a qualquer hora.</p>
             </section>
 
-            <section id="para-embarcadores-intro">
+            <section id="rastreamento">
                 <h2>Para Quem Envia</h2>
 
                 <p>Gerencie suas entregas de maneira fácil e rápida, sem se preocupar com
                     a transportadora.</p>
-            </section>
-
-            <section id="rastreamento">
-              <h2>Rastreie Sua Carga</h2>
-              <p>Visualize sua entrega com um mapa atualizado em tempo real.</p>
-              <div class="imagem">
-                <img src="content/img/staticmap.png" alt="Mapa" class="mapa" />
-              </div>
-            </section>
-
-            <section id="confiabilidade">
-              <h2>Confiabilidade</h2>
-
-              <p>Encontre a transportadora ideal para a sua carga consultando seu histórico
+                
+                <p>Rastrei sua entrega com um mapa atualizado em tempo real.</p>
+                
+                <p>Encontre a transportadora ideal para a sua carga consultando seu histórico
                 e avaliações de clientes anteriores.</p>
+                
+              <div class="imagem">
+                  <img src="content/img/staticmap.png" alt="Mapa" class="mapa" /> </div>
             </section>
+
 
             <section id="para-transportadoras-intro">
                 <h2>Para Quem Transporta</h2>
 
                 <p>Divulgue sua marca e gerencie suas rotas.</p>
 
+                <p>Gerenciamento completo para sua frota, com informações de localização
+                em tempo real e sugestões para uma melhor programação em suas entregas.</p>
+                
+                 <p>Com um amplo registro de cargas disponível, encontre a que melhor se encaixa
+                em sua rota.</p>
+                 
                 <div class="imagem">
                     <img src="content/img/caminhao2.png" class="caminhao">
                 </div>
             </section>
-
-            <section id="controle-de-frota">
-              <h2>Controle de Frota</h2>
-              
-              <p>Gerenciamento completo para sua frota, com informações de localização
-                em tempo real e sugestões para uma melhor programação em suas entregas.</p>
+            
+            <section id="contato">
+                <h2>Contato</h2>
+                
+                <p>Quer saber mais sobre o frete planejado? tem alguma duvida? Alguma segestão?
+                
+                <p>
+                    <a href="" class="entrecontato">Entre em contato!</a>
+                </p>
+                
+                <p>Você também nos encontra nas redes socias</p>
+                
+                <p>
+                    <img src="/FretePlanejado/content/img/facebook.png" />
+                    <img src="/FretePlanejado/content/img/twitter.png" />
+                    <img src="/FretePlanejado/content/img/youtube.png" />
+                </p>
+                
+                <div class="imagem">
+                    <img src="content/img/contato.png" class="caminhao">
+                </div>
             </section>
 
-            <section id="carga-ideal">
-              <h2>Encontre Sua Carga Ideal</h2>
-              
-              <p>Com um amplo registro de cargas disponível, encontre a que melhor se encaixa
-                em sua rota.</p>
-            </section>
         </div>
 
 

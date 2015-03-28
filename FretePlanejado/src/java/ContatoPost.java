@@ -10,12 +10,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author 42143954840
+ * @author Gabriel Malaquias
  */
-public class Logado extends HttpServlet {
+public class ContatoPost extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,10 +35,10 @@ public class Logado extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Logado</title>");            
+            out.println("<title>Servlet ContatoPost</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Logado at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet ContatoPost at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -69,7 +70,9 @@ public class Logado extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       HttpSession session = request.getSession(true);
+       session.setAttribute("sucess", "1");
+       response.sendRedirect("/FretePlanejado/contato.jsp");
     }
 
     /**
