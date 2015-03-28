@@ -75,7 +75,7 @@
                 <p>Quer saber mais sobre o frete planejado? tem alguma duvida? Alguma segestão?
                 
                 <p>
-                    <a href="" class="entrecontato">Entre em contato!</a>
+                    <a href="/FretePlanejado/contato.jsp" class="entrecontato">Entre em contato!</a>
                 </p>
                 
                 <p>Você também nos encontra nas redes socias</p>
