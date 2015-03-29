@@ -32,6 +32,5 @@
   },
   "_source": "git://github.com/polem/onepage-scroll.git",
   "_target": "~1.1.10",
-  "_originalSource": "jquery.onepage-scroll",
-  "_direct": true
+  "_originalSource": "jquery.onepage-scroll"
 }

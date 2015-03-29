@@ -10,6 +10,26 @@
         <link rel="stylesheet" type="text/css" href="content/css/main.css">
     </head>
     <body>
+        <header>
+            <div class="deslogado">
+                <form id="login-form" action="/FretePlanejado/LoginServlet" method="POST">
+                    <label for="username">Nome de Usuário:</label>
+                    <input id="username" name="login" type="text">
+                    
+                    <label for="senha">Senha:</label>
+                    <input id="senha" name="senha" type="password">
+                    
+                    <button id="login">Log In</button>
+                </form>
+
+                <button id="signup">Registrar</button>
+            </div>
+            <div class="logado">
+                <span id="username"></span>
+                <button id="logout" class="hidden">Log Out</button>
+            </div>
+        </header>
+
         <div class="main">
             <section id="apresentacao">
                 <h1>Frete Planejado</h1>
@@ -28,7 +48,7 @@
                 </div>
             </section>
 
-            <section>
+            <section id="para-embarcadores-intro">
                 <h2>Para Quem Envia</h2>
 
                 <p>Gerencie suas entregas de maneira fácil e rápida, sem se preocupar com
@@ -52,10 +72,14 @@
                 e avaliações de clientes anteriores.</p>
             </section>
 
-            <section>
+            <section id="para-transportadoras-intro">
                 <h2>Para Quem Transporta</h2>
 
                 <p>Divulgue sua marca e gerencie suas rotas.</p>
+
+                <div class="imagem">
+                    <img src="content/img/caminhao2.png" class="caminhao">
+                </div>
             </section>
 
             <section id="controle-de-frota">

@@ -49,31 +49,101 @@ section .showcase-image {
   position: absolute;
   top: 20%;
   right: 1em;
+  width: 50%;
 }
 
 section .showcase-image img {
   border-radius: 5px;
 
+  transition: margin 1s linear;
   max-width: 100%;
-
-  transition: margin-top 1s linear, box-shadow 1s linear;
 }
 
-section.active .showcase-image img {
-  margin-top: -70px;
-  box-shadow: 0 0 20px rgba(0,0,0,.3);
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1;
+  text-align: right;
+
+  background: #9a009a;
 }
 
-
-
-.download-buttons ul {
-  padding: 0;
+header button, header a, .entrecontato {
+  background-color: transparent;
+  border: none;
+  padding: 0 1em;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 2px solid #b300b3;
+  text-decoration: none;
+  transition: background-color .1s linear, border-color .1s linear;
+  display: inline-block;
 }
 
-.download-buttons ul li {
-  padding: 0;
+header a{
+      color: #fff;
+      margin-bottom: 5px;
+}
+.entrecontato{
+    background: #9a009a;
+    padding: 15px;
+    color:#fff;
+}
+
+header form {
   display: inline;
 }
+
+header form input {
+  border: 0;
+  padding: 0 .5em;
+  width: 150px;
+  color: #000;
+}
+
+header .group {
+  white-space: nowrap;
+  display: inline;
+}
+
+header button,
+header label,
+header input {
+  color: #fff;
+  font-size: .8rem;
+  margin: .5em 0;
+  line-height: 2em;
+}
+
+header #login {
+  background-color: #b300b3;
+}
+
+  header #login:hover, header a:hover, .entrecontato:hover {
+    background-color: #cd00cd;
+    border-color: #cd00cd;
+  }
+
+header #signup:hover {
+  background-color: #b300b3;
+
+}
+
+  header #login:hover {
+    background-color: #cd00cd;
+  }
+
+  header #signup:hover {
+    background-color: #b300b3;
+  }
+  
+  header .logado img{
+      width: 50px;
+      height: 50px;
+  }
 
 .download-buttons a {
   display: inline-block;
@@ -81,7 +151,9 @@ section.active .showcase-image img {
   margin: 5px;
 
   border: 5px solid;
+
   border-radius: 10px;
+  border: 5px solid;
 
   color: #fff;
   font-weight: bold;
@@ -130,4 +202,47 @@ section.active .showcase-image img {
 .download-buttons a:active {
   box-shadow: none;
   transition: box-shadow .1s linear;
+}
+
+#rastreamento .mapa {
+  border-radius: 5px;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+
+  transition: margin-top 1s linear, box-shadow 1s linear;
+}
+
+#rastreamento.active .mapa {
+  margin-top: -70px;
+  box-shadow: 0 0 20px rgba(0,0,0,.3);
+}
+
+#para-transportadoras-intro .caminhao {
+  /*filter: FlipH;
+  -ms-filter: "FlipH";
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);*/
+}
+
+  #para-transportadoras-intro.active .caminhao {
+    margin-right: 70px;
+  }
+
+.hidden {
+  display: none;
+}
+
+#content {
+    margin-top: 60px;
+}
+
+#username-display{
+    color:#fff;
+}
+
+.bg-app{
+    width: 100%;
 }

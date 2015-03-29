@@ -9,35 +9,94 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-        <link href="content/css/onepage-scroll.css" rel="stylesheet"/>
-        <link rel="stylesheet" type="text/css" href="content/css/main.css">
+        <title>Frete Planejado</title>
+
         <link href='http://fonts.googleapis.com/css?family=Raleway:700,100,400,200,300' rel='stylesheet' type='text/css'>
+        <link href="bower_components/jquery.onepage-scroll/dist/jquery.onepage-scroll.css" rel="stylesheet"/>
+        <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+        
+        <link rel="stylesheet" type="text/css" href="content/css/base.css">
+        <link rel="stylesheet" type="text/css" href="content/css/main.css">
     </head>
     <body>
+        <jsp:include page="inc/header.jsp" />  
+
         <div class="main">
-            <section>
+            <section id="apresentacao">
                 <h1>Frete Planejado</h1>
 
-                <p>Facilitando sua vida otario</p>
+                <p>Planeje seus fretes de forma rápida, inteligente
+                  e precisa.</p>
+
                 <div class="download-buttons">
-                    <a href="#" class="android">Download</a>
-                    <a href="#" class="windows-phone">Download</a>
-                    <a href="#" class="ios">Download</a>
+                    <a href="#" class="button android"><span class="fa fa-android"></span> Download</a>
+                    <a href="#" class="button windows-phone"><span class="fa fa-windows"></span> Download</a>
+                    <a href="#" class="button ios"><span class="fa fa-apple"></span> Download</a>
+                </div>
+
+                <p>Acessível de qualquer dispositivo, em qualquer lugar, a qualquer hora.</p>
+            </section>
+
+            <section id="rastreamento">
+                <h2>Para Quem Envia</h2>
+
+                <p>Gerencie suas entregas de maneira fácil e rápida, sem se preocupar com
+                    a transportadora.</p>
+                
+                <p>Rastrei sua entrega com um mapa atualizado em tempo real.</p>
+                
+                <p>Encontre a transportadora ideal para a sua carga consultando seu histórico
+                e avaliações de clientes anteriores.</p>
+                
+              <div class="imagem">
+                  <img src="content/img/staticmap.png" alt="Mapa" class="mapa" /> </div>
+            </section>
+
+
+            <section id="para-transportadoras-intro">
+                <h2>Para Quem Transporta</h2>
+
+                <p>Divulgue sua marca e gerencie suas rotas.</p>
+
+                <p>Gerenciamento completo para sua frota, com informações de localização
+                em tempo real e sugestões para uma melhor programação em suas entregas.</p>
+                
+                 <p>Com um amplo registro de cargas disponível, encontre a que melhor se encaixa
+                em sua rota.</p>
+                 
+                <div class="imagem">
+                    <img src="content/img/caminhao2.png" class="caminhao">
                 </div>
             </section>
             
-            
-            
-            
-            
-            <section><h1>Hello World 3!</h1></section>
-            
+            <section id="contato">
+                <h2>Contato</h2>
+                
+                <p>Quer saber mais sobre o frete planejado? tem alguma duvida? Alguma segestão?
+                
+                <p>
+                    <a href="/FretePlanejado/contato.jsp" class="entrecontato">Entre em contato!</a>
+                </p>
+                
+                <p>Você também nos encontra nas redes socias</p>
+                
+                <p>
+                    <img src="/FretePlanejado/content/img/facebook.png" />
+                    <img src="/FretePlanejado/content/img/twitter.png" />
+                    <img src="/FretePlanejado/content/img/youtube.png" />
+                </p>
+                
+                <div class="imagem">
+                    <img src="content/img/contato.png" class="caminhao">
+                </div>
+            </section>
+
         </div>
-        
-        
-        <script src="content/js/jquery-2.1.3.js"></script>
-        <script src="content/js/onepage-scroll-1.3.1/jquery.onepage-scroll.js"></script>
+
+
+        <script src="bower_components/Modernizr/modernizr.js" rel="stylesheet"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js" rel="stylesheet"></script>
+        <script src="bower_components/jquery.onepage-scroll/dist/jquery.onepage-scroll.min.js" rel="stylesheet"/></script>
         <script src="content/js/main.js"></script>
     </body>
 </html>
