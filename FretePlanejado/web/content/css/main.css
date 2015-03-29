@@ -9,7 +9,7 @@ html {
 }
 
 section {
-	padding: 3em 3em;
+	padding: 3em 1em;
   /*background-color: #ffc04d;*/
   transition: background-color .3s linear;
 
@@ -28,6 +28,13 @@ section.active {
 }
 
 section h1,
+section h2,
+section p,
+section div {
+  width: 50%;
+}
+
+section h1,
 section h2 {
 	font-size: 3em;
   font-weight: 500;
@@ -36,21 +43,65 @@ section h2 {
 section p {
   font-weight: 100;
   font-size: 2em;
-  width: 500px;
+}
+
+section .showcase-image {
+  position: absolute;
+  top: 20%;
+  right: 1em;
+}
+
+section .showcase-image img {
+  border-radius: 5px;
+
+  max-width: 100%;
+
+  transition: margin-top 1s linear, box-shadow 1s linear;
+}
+
+section.active .showcase-image img {
+  margin-top: -70px;
+  box-shadow: 0 0 20px rgba(0,0,0,.3);
+}
+
+
+
+.download-buttons ul {
+  padding: 0;
+}
+
+.download-buttons ul li {
+  padding: 0;
+  display: inline;
 }
 
 .download-buttons a {
+  display: inline-block;
   padding: 0.7em 0.6em;
-  margin: 0 5px;
+  margin: 5px;
+
+  border: 5px solid;
   border-radius: 10px;
-  font-weight: bold;
+
   color: #fff;
+  font-weight: bold;
   text-decoration: none;
   font-size: 1.2em;
   text-shadow: 1px 1px 1px #111;
+
   transition: box-shadow .3s linear;
-  display: inline-block;
-  border: 5px solid;
+}
+
+.download-buttons p {
+  font-size: 1.2em;
+  width: 100%;
+  font-weight: 200;
+}
+
+@media screen and (max-width: 700px) {
+  .download-buttons a {
+    display: block;
+  }
 }
 
 .download-buttons a .fa {
@@ -79,18 +130,4 @@ section p {
 .download-buttons a:active {
   box-shadow: none;
   transition: box-shadow .1s linear;
-}
-
-#rastreamento .map {
-  border-radius: 5px;
-  position: absolute;
-  top: 20%;
-  right: 5%;
-
-  transition: margin-top 1s linear, box-shadow 1s linear;
-}
-
-#rastreamento.active .map {
-  margin-top: -70px;
-  box-shadow: 0 0 20px rgba(0,0,0,.3);
 }
