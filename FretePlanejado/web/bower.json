@@ -20,10 +20,10 @@
     "tests"
   ],
   "resolutions": {
-    "jquery": "~2.1.3"
+    "jquery": "~1.10"
   },
   "dependencies": {
-    "jquery": "~2.1.3",
+    "jquery": "~1.10",
     "jquery.onepage-scroll": "~1.1.10",
     "font-awesome": "~4.3.0"
   }

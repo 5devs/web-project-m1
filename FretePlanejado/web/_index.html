@@ -7,28 +7,12 @@
         <link href='http://fonts.googleapis.com/css?family=Raleway:700,100,400,200,300' rel='stylesheet' type='text/css'>
         <link href="bower_components/jquery.onepage-scroll/dist/jquery.onepage-scroll.css" rel="stylesheet"/>
         <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+
+        <link rel="stylesheet" type="text/css" href="content/css/base.css">
         <link rel="stylesheet" type="text/css" href="content/css/main.css">
     </head>
     <body>
-        <header>
-            <div class="deslogado">
-                <form id="login-form" action="/FretePlanejado/LoginServlet" method="POST">
-                    <label for="username">Nome de Usuário:</label>
-                    <input id="username" name="login" type="text">
-                    
-                    <label for="senha">Senha:</label>
-                    <input id="senha" name="senha" type="password">
-                    
-                    <button id="login">Log In</button>
-                </form>
-
-                <button id="signup">Registrar</button>
-            </div>
-            <div class="logado">
-                <span id="username"></span>
-                <button id="logout" class="hidden">Log Out</button>
-            </div>
-        </header>
+        <jsp:include page="inc/header.jsp" />
 
         <div class="main">
             <section id="apresentacao">
@@ -38,72 +22,77 @@
                   e precisa.</p>
 
                 <div class="download-buttons">
-                  <ul>
-                    <li><a href="#" class="android"><span class="fa fa-android"></span> Download</a></li>
-                    <li><a href="#" class="windows-phone"><span class="fa fa-windows"></span> Download</a></li>
-                    <li><a href="#" class="ios"><span class="fa fa-apple"></span> Download</a></li>
-                  </ul>
-
-                  <p>Acessível de qualquer dispositivo, em qualquer lugar, a qualquer hora.</p>
+                    <a href="#" class="button android"><span class="fa fa-android"></span> Download</a>
+                    <a href="#" class="button windows-phone"><span class="fa fa-windows"></span> Download</a>
+                    <a href="#" class="button ios"><span class="fa fa-apple"></span> Download</a>
                 </div>
+
+                <p>Acessível de qualquer dispositivo, em qualquer lugar, a qualquer hora.</p>
             </section>
 
-            <section id="para-embarcadores-intro">
+            <section id="rastreamento">
+              <div class="conteudo">
                 <h2>Para Quem Envia</h2>
 
                 <p>Gerencie suas entregas de maneira fácil e rápida, sem se preocupar com
                     a transportadora.</p>
-            </section>
 
-            <section id="rastreamento">
-              <h2>Rastreie Sua Carga</h2>
+                <p>Rastrei sua entrega com um mapa atualizado em tempo real.</p>
 
-              <p>Visualize sua entrega com um mapa atualizado em tempo real.</p>
+                <p>Encontre a transportadora ideal para a sua carga consultando seu histórico
+                e avaliações de clientes anteriores.</p>
+              </div>
 
               <div class="showcase-image">
-                <img src="content/img/staticmap.png" alt="Mapa" class="map" />
+                <img src="content/img/staticmap.png" alt="Mapa" class="mapa" />
               </div>
             </section>
 
-            <section id="confiabilidade">
-              <h2>Confiabilidade</h2>
-
-              <p>Encontre a transportadora ideal para a sua carga consultando seu histórico
-                e avaliações de clientes anteriores.</p>
-            </section>
 
             <section id="para-transportadoras-intro">
+              <div class="conteudo">
                 <h2>Para Quem Transporta</h2>
 
                 <p>Divulgue sua marca e gerencie suas rotas.</p>
 
-                <div class="imagem">
-                    <img src="content/img/caminhao2.png" class="caminhao">
-                </div>
-            </section>
-
-            <section id="controle-de-frota">
-              <h2>Controle de Frota</h2>
-
-              <p>Gerenciamento completo para sua frota, com informações de localização
+                <p>Gerenciamento completo para sua frota, com informações de localização
                 em tempo real e sugestões para uma melhor programação em suas entregas.</p>
+
+                 <p>Com um amplo registro de cargas disponível, encontre a que melhor se encaixa
+                em sua rota.</p>
+              </div>
+
+              <div class="showcase-image">
+                  <img src="content/img/caminhao2.png" class="caminhao" alt="Caiminhão de Frete">
+              </div>
             </section>
 
-            <section id="carga-ideal">
-              <h2>Encontre Sua Carga Ideal</h2>
+            <section id="contato">
+              <div class="conteudo">
+                <h2>Contato</h2>
 
-              <p>Com um amplo registro de cargas disponível, encontre a que melhor se encaixa
-                em sua rota.</p>
+                <p>Quer saber mais sobre o frete planejado? tem alguma duvida? Alguma segestão?</p>
 
-                <div class="showcase-image">
-                  <span class="fa fa-truck"></span>
-                </div>
+                <a href="/FretePlanejado/contato.jsp" class="entrecontato">Entre em Contato!</a>
+
+                <p>Você também nos encontra nas redes socias</p>
+
+                <ul id="redes-sociais">
+                  <li><span class="fa fa-twitter"></span></li>
+                  <li><span class="fa fa-facebook"></span></li>
+                  <li><span class="fa fa-youtube"></span></li>
+                </ul>
+              </div>
+
+              <div class="showcase-image">
+                  <img src="content/img/contato.png" class="contato">
+              </div>
             </section>
         </div>
 
 
         <script src="bower_components/Modernizr/modernizr.js" rel="stylesheet"></script>
-        <script src="bower_components/jquery/dist/jquery.min.js" rel="stylesheet"></script>
+        <script src="bower_components/jquery/jquery.min.js" rel="stylesheet"></script>
         <script src="bower_components/jquery.onepage-scroll/dist/jquery.onepage-scroll.min.js" rel="stylesheet"/></script>
         <script src="content/js/main.js"></script>
     </body>
