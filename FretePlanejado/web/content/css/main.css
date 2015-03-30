@@ -11,12 +11,12 @@ html {
 
 @media screen and (min-width: 1200px) {
   html {
-  	font-size: 40px;
+  	font-size: 30px;
   }
 }
 
 section {
-	padding: 25px;
+	padding: 1.5em 25px;
   /*background-color: #ffc04d;*/
   transition: background-color .3s linear;
 
