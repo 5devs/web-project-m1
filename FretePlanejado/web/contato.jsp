@@ -12,7 +12,6 @@
         <title>Frete Planejado | Contato</title>
 
         <link href='http://fonts.googleapis.com/css?family=Raleway:700,100,400,200,300' rel='stylesheet' type='text/css'>
-        <link href="bower_components/jquery.onepage-scroll/dist/jquery.onepage-scroll.css" rel="stylesheet"/>
         <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet"/>
         
         <link rel="stylesheet" type="text/css" href="content/css/base.css">
@@ -24,7 +23,7 @@
         <jsp:include page="inc/header.jsp" />  
         <!-- /HEADER -->
         
-        <div id="content">
+        <article id="contato">
             <h1>Contato</h1>
 
             <% if(session.getAttribute("sucess") != null){ %>
@@ -35,16 +34,16 @@
             
             <form action="/FretePlanejado/ContatoPost" method="post" >
                 <label for="Nome">Nome</label>
-                <input type="text" <% if(session.getAttribute("Logado") != null) { %> value="Adminstrador" readonly="false" <% } %> name="Nome" />
-                <label for="Nome">E-mail</label>
-                <input type="text" <% if(session.getAttribute("Logado") != null) { %> value="admin@admin.com" readonly="false" <% } %> name="Email" />
-                <label for="Nome">Assunto</label>
-                <input type="text" name="Assunto" />
-                <label for="Nome">Mensagem</label>
-                <textarea name="Msg"></textarea>
+                <input id="Nome" type="text" <% if(session.getAttribute("Logado") != null) { %> value="Administrador" readonly="false" <% } %> name="Nome" />
+                <label for="Email">E-mail</label>
+                <input id="Email" type="text" <% if(session.getAttribute("Logado") != null) { %> value="admin@admin.com" readonly="false" <% } %> name="Email" />
+                <label for="Assunto">Assunto</label>
+                <input id="Assunto" type="text" name="Assunto" />
+                <label for="Message">Mensagem</label>
+                <textarea id="Message" name="Msg" lines="3"></textarea>
                 
-                <input type="submit" value="Enviar">
+                <input type="submit" value="Enviar" class="button">
             </form>
-        </div>
+        </article>
     </body>
 </html>

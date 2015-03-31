@@ -38,6 +38,7 @@
             </section>
 
             <section id="rastreamento">
+              <div class="conteudo">
                 <h2>Para Quem Envia</h2>
 
                 <p>Gerencie suas entregas de maneira fácil e rápida, sem se preocupar com
@@ -47,13 +48,16 @@
 
                 <p>Encontre a transportadora ideal para a sua carga consultando seu histórico
                 e avaliações de clientes anteriores.</p>
+              </div>
 
               <div class="showcase-image">
-                  <img src="content/img/staticmap.png" alt="Mapa" class="mapa" /> </div>
+                <img src="content/img/staticmap.png" alt="Mapa" class="mapa" />
+              </div>
             </section>
 
 
             <section id="para-transportadoras-intro">
+              <div class="conteudo">
                 <h2>Para Quem Transporta</h2>
 
                 <p>Divulgue sua marca e gerencie suas rotas.</p>
@@ -63,37 +67,39 @@
 
                  <p>Com um amplo registro de cargas disponível, encontre a que melhor se encaixa
                 em sua rota.</p>
+              </div>
 
-                <div class="imagem">
-                    <img src="content/img/caminhao2.png" class="caminhao">
-                </div>
+              <div class="showcase-image">
+                  <img src="content/img/caminhao2.png" class="caminhao" alt="Caiminhão de Frete">
+              </div>
             </section>
 
             <section id="contato">
+              <div class="conteudo">
                 <h2>Contato</h2>
 
                 <p>Quer saber mais sobre o frete planejado? tem alguma duvida? Alguma segestão?</p>
 
-                <a href="/FretePlanejado/contato.jsp" class="entrecontato">Entre em Contato!</a>
+                <a href="/FretePlanejado/contato.jsp" class="entrecontato button">Entre em Contato!</a>
 
                 <p>Você também nos encontra nas redes socias</p>
 
                 <ul id="redes-sociais">
-                  <li><span class="fa fa-twitter"></span></li>
-                  <li><span class="fa fa-facebook"></span></li>
-                  <li><span class="fa fa-youtube"></span></li>
+                    <li><img src="/FretePlanejado/content/img/facebook.png" /></li>
+                    <li><img src="/FretePlanejado/content/img/twitter.png" /></li>
+                    <li><img src="/FretePlanejado/content/img/youtube.png" /></li>
                 </ul>
+              </div>
 
-                <div class="showcase-image">
-                    <img src="content/img/contato.png" class="contato">
-                </div>
+              <div class="showcase-image">
+                  <img src="content/img/contato.png" class="contato">
+              </div>
             </section>
         </div>
 
 
-        <script src="bower_components/Modernizr/modernizr.js" rel="stylesheet"></script>
-        <script src="bower_components/jquery/dist/jquery.min.js" rel="stylesheet"></script>
+        <script src="bower_components/modernizr/modernizr.js" rel="stylesheet"></script>
+        <script src="bower_components/jquery/jquery.min.js" rel="stylesheet"></script>
         <script src="bower_components/jquery.onepage-scroll/dist/jquery.onepage-scroll.min.js" rel="stylesheet"/></script>
         <script src="content/js/main.js"></script>
-    </body>
 </html>

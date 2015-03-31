@@ -7,3 +7,132 @@ html {
 	font-size: 16px;
   cursor: default;
 }
+
+input,
+textarea,
+select {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+header#user-controls {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1;
+
+  background: #9a009a;
+  height: 60px;
+}
+
+header#user-controls a {
+  color: #fff;
+}
+
+header#user-controls form {
+  display: inline;
+}
+
+header#user-controls form input {
+  border: 0;
+  padding: 0 .5em;
+  width: 150px;
+  color: #000;
+}
+
+header#user-controls .group {
+  white-space: nowrap;
+  display: inline;
+}
+
+header#user-controls,
+header#user-controls button,
+header#user-controls label,
+header#user-controls input {
+  font-size: 12px;
+}
+
+header#user-controls button,
+header#user-controls label,
+header#user-controls input {
+  color: #fff;
+  margin: .5em 0;
+}
+
+header#user-controls #login {
+  background-color: #b300b3;
+}
+
+
+header#user-controls button,
+header#user-controls a,
+.button {
+  background-color: transparent;
+  border: none;
+  padding: 0 1em;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 2px solid #b300b3;
+  text-decoration: none;
+  transition: background-color .1s linear, border-color .1s linear;
+  display: inline-block;
+}
+
+header#user-controls #login:hover,
+header#user-controls a:hover,
+.button:hover {
+  background-color: #cd00cd;
+  border-color: #cd00cd;
+}
+
+header#user-controls #signup:hover {
+  background-color: #b300b3;
+
+}
+
+  header#user-controls #login:hover {
+    background-color: #cd00cd;
+  }
+
+  header#user-controls #signup:hover {
+    background-color: #b300b3;
+  }
+
+  header#user-controls .logado img{
+    width: 50px;
+    height: 50px;
+  }
+
+header#user-controls ul#main-menu {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+  header#user-controls ul#main-menu li {
+    display: inline-block;
+    padding: 0;
+    margin: 0 2px;
+  }
+
+    header#user-controls ul#main-menu li a {
+      border: none;
+      border-radius: 0;
+    }
+
+header#user-controls ul#main-menu,
+header#user-controls .logado,
+header#user-controls .deslogado {
+  line-height: 60px;
+}
+
+header#user-controls ul#main-menu {
+  float: left;
+}
+
+header#user-controls .logado,
+header#user-controls .deslogado {
+  float: right;
+}

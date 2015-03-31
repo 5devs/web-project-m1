@@ -12,7 +12,22 @@
         <link rel="stylesheet" type="text/css" href="content/css/main.css">
     </head>
     <body>
-        <jsp:include page="inc/header.jsp" />
+      <header>
+        <div class="deslogado">
+        <form id="login-form" action="/FretePlanejado/Login" class="invalid" method="post">
+            <label for="username">Nome de Usuário:</label>
+            <input id="username" name="Login" type="text">
+            
+            <label for="senha">Senha:</label>
+            <input id="senha" name="Senha" type="password">
+            
+            <button id="login">Log In</button>
+        </form>
+        
+        <button id="signup">Registrar</button>
+        
+        </div>
+      </header>
 
         <div class="main">
             <section id="apresentacao">

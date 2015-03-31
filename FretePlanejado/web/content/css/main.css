@@ -16,7 +16,7 @@ html {
 }
 
 section {
-	padding: 1.5em 25px;
+	padding: 50px 25px;
   /*background-color: #ffc04d;*/
   transition: background-color .3s linear;
 
@@ -34,20 +34,24 @@ section.active {
   /*background-color: #FA0;*/
 }
 
-section .conteudo,
-section .showcase-image {
-  width: 49%;
-  display: inline-block;
-}
-
-section h1,
-section h2 {
+h1,
+h2 {
   margin: 0;
   font-weight: 500;
 }
 
+article {
+  margin-top: 60px;
+}
+
 section p {
   font-weight: 100;
+}
+
+section .conteudo,
+section .showcase-image {
+  width: 49%;
+  display: inline-block;
 }
 
 section .showcase-image {
@@ -63,92 +67,11 @@ section .showcase-image img {
   right: 0;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  z-index: 1;
-  text-align: right;
-
-  background: #9a009a;
-}
-
-header button, header a, .entrecontato {
-  background-color: transparent;
-  border: none;
-  padding: 0 1em;
-  cursor: pointer;
-  border-radius: 3px;
-  border: 2px solid #b300b3;
-  text-decoration: none;
-  transition: background-color .1s linear, border-color .1s linear;
-  display: inline-block;
-}
-
-header a{
-  color: #fff;
-  margin-bottom: 5px;
-}
-
 .entrecontato{
   background: #9a009a;
   padding: 15px;
   color:#fff;
 }
-
-header form {
-  display: inline;
-}
-
-header form input {
-  border: 0;
-  padding: 0 .5em;
-  width: 150px;
-  color: #000;
-}
-
-header .group {
-  white-space: nowrap;
-  display: inline;
-}
-
-header button,
-header label,
-header input {
-  color: #fff;
-  font-size: .8rem;
-  margin: .5em 0;
-  line-height: 2em;
-}
-
-header #login {
-  background-color: #b300b3;
-}
-
-  header #login:hover, header a:hover, .entrecontato:hover {
-    background-color: #cd00cd;
-    border-color: #cd00cd;
-  }
-
-header #signup:hover {
-  background-color: #b300b3;
-
-}
-
-  header #login:hover {
-    background-color: #cd00cd;
-  }
-
-  header #signup:hover {
-    background-color: #b300b3;
-  }
-
-  header .logado img{
-      width: 50px;
-      height: 50px;
-  }
 
 .download-buttons a {
   display: inline-block;
@@ -234,16 +157,8 @@ header #signup:hover {
   display: none;
 }
 
-#content {
-  margin-top: 60px;
-}
-
 #username-display{
   color:#fff;
-}
-
-.bg-app{
-    width: 100%;
 }
 
 #redes-sociais {
@@ -269,3 +184,31 @@ header #signup:hover {
   #redes-sociais .fa-youtube {
     color: #e52d27;
   }
+
+#contato {
+  padding: 1em;
+}
+
+#contato form label {
+  display: inline-block;
+  
+  min-width: 100%;
+  margin-top: .5em;
+
+  font-size: .8em;
+  font-variant: small-caps;
+}
+
+#contato form input, 
+#contato form textarea, 
+#contato form select {
+  width: 100%;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+#contato form {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
