@@ -26,10 +26,9 @@
         <article id="contato">
             <h1>Contato</h1>
 
-            <% if(session.getAttribute("sucess") != null){ %>
+            <% if(session.getAttribute("sucess") != null) { %>
             <div class="msg">Mensagem enviada com sucesso!</div>
-            <% 
-            session.setAttribute("sucess", null);
+            <% session.setAttribute("sucess", null);
             } %>
             
             <form action="/FretePlanejado/ContatoPost" method="post" >

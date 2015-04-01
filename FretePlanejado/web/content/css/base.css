@@ -37,7 +37,6 @@ header#user-controls form {
 
 header#user-controls form input {
   border: 0;
-  padding: 0 .5em;
   width: 150px;
   color: #000;
 }
@@ -51,7 +50,7 @@ header#user-controls,
 header#user-controls button,
 header#user-controls label,
 header#user-controls input {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 header#user-controls button,
@@ -59,6 +58,7 @@ header#user-controls label,
 header#user-controls input {
   color: #fff;
   margin: .5em 0;
+  padding: .5em;
 }
 
 header#user-controls #login {
@@ -71,7 +71,7 @@ header#user-controls a,
 .button {
   background-color: transparent;
   border: none;
-  padding: 0 1em;
+  padding: .5em 1em;
   cursor: pointer;
   border-radius: 3px;
   border: 2px solid #b300b3;
@@ -100,7 +100,7 @@ header#user-controls #signup:hover {
     background-color: #b300b3;
   }
 
-  header#user-controls .logado img{
+  header#user-controls .logado img {
     width: 50px;
     height: 50px;
   }
@@ -114,12 +114,17 @@ header#user-controls ul#main-menu {
   header#user-controls ul#main-menu li {
     display: inline-block;
     padding: 0;
-    margin: 0 2px;
+    margin: 0;
+    min-width: 80px;
+    text-align: center;
   }
 
     header#user-controls ul#main-menu li a {
+      display: block;
+      width: 100%;
       border: none;
       border-radius: 0;
+      padding: 0 1em;
     }
 
 header#user-controls ul#main-menu,
@@ -136,3 +141,17 @@ header#user-controls .logado,
 header#user-controls .deslogado {
   float: right;
 }
+
+header#user-controls form.invalid {
+}
+
+  header#user-controls form.invalid input {
+    background-color: #ffefef;
+    border-bottom: dotted #F22 2px;
+    transition: background-color .3s linear;
+  }
+
+  header#user-controls form.invalid input:hover,
+  header#user-controls form.invalid input:focus {
+    background-color: #fdd;
+  }
