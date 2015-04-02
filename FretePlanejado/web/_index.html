@@ -12,25 +12,58 @@
         <link rel="stylesheet" type="text/css" href="content/css/main.css">
     </head>
     <body>
-      <header>
-        <div class="deslogado">
-        <form id="login-form" action="/FretePlanejado/Login" class="invalid" method="post">
-            <label for="username">Nome de Usuário:</label>
-            <input id="username" name="Login" type="text">
-            
-            <label for="senha">Senha:</label>
-            <input id="senha" name="Senha" type="password">
-            
-            <button id="login">Log In</button>
-        </form>
-        
-        <button id="signup">Registrar</button>
-        
-        </div>
-      </header>
+      <header id="user-controls">
+    
+        <button class="toggle-menu"><span class="fa fa-bars"></span></button>
 
-        <div class="main">
+        <div class="header-content">
+            <!-- MENU --> 
+            <ul id="main-menu">
+                <li><a href="/FretePlanejado">Home</a></li>
+                <li><a href="#">Fretes</a></li>
+                <li><a href="#">Calendário</a></li>
+                <li><a href="/FretePlanejado/contato.jsp">Contato</a></li>
+            </ul>
+            <!-- /MENU -->
+
+            <% if(session.getAttribute("Logado") == null) { %>
+              <div class="deslogado">
+                <form id="login-form" action="/FretePlanejado/Login"
+                  class="<%=(session.getAttribute("Erro") != null) ? "invalid" : "" %>"
+                  method="post">
+                    <div class="group">
+                        <label for="username">Nome de Usuário:</label>
+                        <input id="username" name="Login" type="text">
+                    </div>
+
+                    <div class="group">
+                        <label for="senha">Senha:</label>
+                        <input id="senha" name="Senha" type="password">
+                    </div>
+
+                  <button id="login">Log In</button>
+                </form>
+
+                <button id="signup">Registrar</button>
+              </div>
+            <%
+              if(session.getAttribute("Erro") != null)
+                session.setAttribute("Erro", null);
+            } else {
+            %>
+              <div class="logado">
+                <span id="username-display"><img src="/FretePlanejado/content/img/avatar.png" /> Olá, Administrador!</span>
+                <a href="/FretePlanejado/app.jsp" class="button" id="app">Painel</a>
+                <a href="/FretePlanejado/Logout" class="button" id="logout">Log Out</a>
+              </div>
+            <% } %>
+        </div>
+
+    </header>
+
+      <div class="main">
             <section id="apresentacao">
+              <div class="conteudo">
                 <h1>Frete Planejado</h1>
 
                 <p>Planeje seus fretes de forma rápida, inteligente
@@ -43,6 +76,12 @@
                 </div>
 
                 <p>Acessível de qualquer dispositivo, em qualquer lugar, a qualquer hora.</p>
+              </div>
+
+              <div class="showcase-image">
+                <img src="content/img/freteplanejado.png"  alt="Logo do Frete Planejado"
+                     class="logo" width="500" />
+              </div>
             </section>
 
             <section id="rastreamento">
@@ -88,14 +127,14 @@
 
                 <p>Quer saber mais sobre o frete planejado? tem alguma duvida? Alguma segestão?</p>
 
-                <a href="/FretePlanejado/contato.jsp" class="entrecontato">Entre em Contato!</a>
+                <a href="/FretePlanejado/contato.jsp" class="entrecontato button">Entre em Contato!</a>
 
                 <p>Você também nos encontra nas redes socias</p>
 
                 <ul id="redes-sociais">
-                  <li><span class="fa fa-twitter"></span></li>
-                  <li><span class="fa fa-facebook"></span></li>
-                  <li><span class="fa fa-youtube"></span></li>
+                    <li><a href="http://fb.com/FretePlanejado" target="_BLANK"><img src="/FretePlanejado/content/img/facebook.png" /></a></li>
+                    <li><a href="#"><img src="/FretePlanejado/content/img/twitter.png" /></a></li>
+                    <li><a href="#"><img src="/FretePlanejado/content/img/youtube.png" /></a></li>
                 </ul>
               </div>
 
@@ -106,7 +145,7 @@
         </div>
 
 
-        <script src="bower_components/Modernizr/modernizr.js" rel="stylesheet"></script>
+        <script src="bower_components/modernizr/modernizr.js" rel="stylesheet"></script>
         <script src="bower_components/jquery/jquery.min.js" rel="stylesheet"></script>
         <script src="bower_components/jquery.onepage-scroll/dist/jquery.onepage-scroll.min.js" rel="stylesheet"/></script>
         <script src="content/js/main.js"></script>

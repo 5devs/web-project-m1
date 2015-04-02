@@ -50,5 +50,8 @@
                 <input type="submit" value="Enviar" class="button">
             </form>
         </article>
+        
+        <script src="bower_components/jquery/jquery.min.js" rel="stylesheet"></script>
+        <script src="content/js/contato.js"></script>
     </body>
 </html>

@@ -42,18 +42,36 @@ header#user-controls a {
 }
 
 header#user-controls form {
-  display: inline;
+  display: inline-block;
+}
+
+header#user-controls form .group {
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header#user-controls form label {
+  display: block;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
 }
 
 header#user-controls form input {
-  border: 0;
   width: 150px;
+  display: block;
+  margin: 0;
+  padding: .5em;
+  
+  border: 0;
   color: #000;
 }
 
-header#user-controls .group {
-  white-space: nowrap;
-  display: inline;
+header#user-controls .button {
+  margin: 0;
+  vertical-align: bottom;
+  margin-bottom: 5px;
 }
 
 header#user-controls,
@@ -61,14 +79,6 @@ header#user-controls button,
 header#user-controls label,
 header#user-controls input {
   font-size: 14px;
-}
-
-header#user-controls button,
-header#user-controls label,
-header#user-controls input {
-  color: #fff;
-  margin: .5em 0;
-  padding: .5em;
 }
 
 header#user-controls #login {
@@ -171,40 +181,61 @@ header#user-controls form.invalid {
  
   header#user-controls .toggle-menu {
     display: none;
+    height: 60px;
+    border: none;
   }
   
-  @media screen and (max-width: 500px) {
-      header#user-controls .toggle-menu {
-          display: block;
-      }
-      
-      header#user-controls ul#main-menu {
-          width: 100%;
-      }
-      
-      header#user-controls ul#main-menu li {
-          display: block;
-          width: 100%;
-      }
-      
-      header#user-controls .logado,
-      header#user-controls .deslogado {
-        background-color: #9a009a;
-        width: 100%;
-        text-align: center;
-      }
-      
-    header#user-controls .group,
-    header#user-controls .group input {
-        width: 100%;
-        display: block;
-        margin: 0;
+  @media screen and (max-width: 1100px) {
+    header#user-controls {
+      padding: 0 .3em;
     }
-      
-    header#user-controls .group label {
-        margin: 0;
-        line-height: 1;
-        display: block;
-        padding-bottom: .2em;
+
+    
+    header#user-controls ul#main-menu li {
+      min-width: 0;
+    }
+    
+    header#user-controls ul#main-menu li a {
+        padding: 0 5px;
     }
   }
+  
+  @media screen and (max-width: 750px) {
+    header#user-controls .toggle-menu {
+        display: block;
+    }
+    
+    header#user-controls ul#main-menu {
+        width: 100%;
+    }
+    
+    header#user-controls ul#main-menu li {
+        display: block;
+        width: 100%;
+    }
+    
+    header#user-controls .logado,
+    header#user-controls .deslogado {
+      background-color: #9a009a;
+      width: 100%;
+      text-align: center;
+    }
+    
+  header#user-controls form {
+      display: block;
+  }
+    
+  header#user-controls .group,
+  header#user-controls .group input {
+      width: 100%;
+      display: block;
+      margin: 0;
+  }
+    
+  header#user-controls .group label {
+      margin: 0;
+      line-height: 1;
+      display: block;
+      padding-bottom: .2em;
+  }
+}

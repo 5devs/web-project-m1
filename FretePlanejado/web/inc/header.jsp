@@ -34,10 +34,10 @@
                     <input id="senha" name="Senha" type="password">
                 </div>
 
-              <button id="login">Log In</button>
+              <button id="login" class="button">Log In</button>
             </form>
 
-            <button id="signup">Registrar</button>
+            <button id="signup" class="button">Registrar</button>
           </div>
         <%
           if(session.getAttribute("Erro") != null)
