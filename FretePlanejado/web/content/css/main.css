@@ -1,6 +1,6 @@
 html {
-	font-family: Raleway, calibri, sans-serif;
-	font-size: 25px;
+    font-family: Raleway, calibri, sans-serif;
+    font-size: 25px;
 }
 
 @media screen and (max-width: 700px) {
@@ -16,7 +16,8 @@ html {
 }
 
 section {
-	padding: 60px 25px;
+  padding: 100px 25px;
+  
   /*background-color: #ffc04d;*/
   transition: background-color .3s linear;
 
@@ -46,6 +47,7 @@ article {
 
 section p {
   font-weight: 100;
+  padding: 0;
 }
 
 section .conteudo,
@@ -89,6 +91,8 @@ section .showcase-image img {
   text-shadow: 1px 1px 1px #111;
 
   transition: box-shadow .3s linear;
+  
+  font-size: 0.8em;
 }
 
 .download-buttons p {
@@ -129,6 +133,10 @@ section .showcase-image img {
 .download-buttons a:active {
   box-shadow: none;
   transition: box-shadow .1s linear;
+}
+
+#apresentacao .showcase-image {
+  text-align: center;
 }
 
 #rastreamento .mapa {
@@ -185,11 +193,11 @@ section .showcase-image img {
     color: #e52d27;
   }
 
-#contato {
+article#contato {
   padding: 1em;
 }
 
-#contato form label {
+article#contato form label {
   display: inline-block;
   
   min-width: 100%;
@@ -199,16 +207,16 @@ section .showcase-image img {
   font-variant: small-caps;
 }
 
-#contato form input, 
-#contato form textarea, 
-#contato form select {
+article#contato form input, 
+article#contato form textarea, 
+article#contato form select {
   width: 100%;
   margin: 0;
   padding: 5px 10px;
 }
 
-#contato form {
+article#contato form {
   width: 100%;
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
 }

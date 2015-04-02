@@ -33,13 +33,19 @@
             
             <form action="/FretePlanejado/ContatoPost" method="post" >
                 <label for="Nome">Nome</label>
-                <input id="Nome" type="text" <% if(session.getAttribute("Logado") != null) { %> value="Administrador" readonly="false" <% } %> name="Nome" />
+                <input id="Nome" type="text"
+                    required="required" autofocus="autofocus"
+                    <% if(session.getAttribute("Logado") != null) { %> value="Administrador" readonly="false" <% } %> name="Nome" />
                 <label for="Email">E-mail</label>
-                <input id="Email" type="text" <% if(session.getAttribute("Logado") != null) { %> value="admin@admin.com" readonly="false" <% } %> name="Email" />
+                <input id="Email" type="email"
+                    required="required"
+                    <% if(session.getAttribute("Logado") != null) { %> value="admin@admin.com" readonly="false" <% } %> name="Email" />
                 <label for="Assunto">Assunto</label>
-                <input id="Assunto" type="text" name="Assunto" />
+                <input id="Assunto" type="text" name="Assunto" 
+                    required="required" />
                 <label for="Message">Mensagem</label>
-                <textarea id="Message" name="Msg" lines="3"></textarea>
+                <textarea id="Message" name="Msg" rows="6"
+                    required="required" ></textarea>
                 
                 <input type="submit" value="Enviar" class="button">
             </form>

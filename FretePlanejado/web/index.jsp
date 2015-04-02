@@ -23,6 +23,7 @@
 
         <div class="main">
             <section id="apresentacao">
+              <div class="conteudo">
                 <h1>Frete Planejado</h1>
 
                 <p>Planeje seus fretes de forma rápida, inteligente
@@ -35,6 +36,12 @@
                 </div>
 
                 <p>Acessível de qualquer dispositivo, em qualquer lugar, a qualquer hora.</p>
+              </div>
+
+              <div class="showcase-image">
+                <img src="content/img/freteplanejado.png"  alt="Logo do Frete Planejado"
+                     class="logo" width="500" />
+              </div>
             </section>
 
             <section id="rastreamento">
@@ -85,9 +92,9 @@
                 <p>Você também nos encontra nas redes socias</p>
 
                 <ul id="redes-sociais">
-                    <li><img src="/FretePlanejado/content/img/facebook.png" /></li>
-                    <li><img src="/FretePlanejado/content/img/twitter.png" /></li>
-                    <li><img src="/FretePlanejado/content/img/youtube.png" /></li>
+                    <li><a href="http://fb.com/FretePlanejado" target="_BLANK"><img src="/FretePlanejado/content/img/facebook.png" /></a></li>
+                    <li><a href="#"><img src="/FretePlanejado/content/img/twitter.png" /></a></li>
+                    <li><a href="#"><img src="/FretePlanejado/content/img/youtube.png" /></a></li>
                 </ul>
               </div>
 

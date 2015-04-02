@@ -1,13 +1,45 @@
 body {
-  padding: 0px;
+  padding: 0;
+  margin: 0;
+  margin-top: 60px;
+}
+
+body,
+article {
+    background: #eee;
 }
 
 header#app-header {
-	height: 500px;
-	background-image: url(../img/caminhao-paisagem.jpg);
-        background-size: cover;
+    height: 500px;
+    background-image: url(/FretePlanejado/content/img/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header#app-header h1 {
+    margin: 0;
+    line-height: 500px;
+    
+    color: #fff;
+    text-align: center;
+    font-size: 5em;
+    font-family: Raleway, sans-serif;
+    font-weight: 200;
+    text-shadow: 2px 2px 5px #000;
 }
 
 .bg-app{
     width: 100%;
+}
+
+.blank-slate {
+  padding: 100px;
+  text-align: center;
+  font-size: 4em;
+  background-color: #DDD;
+  margin: 50px 30px;
+  border-radius: 25px;
+  box-shadow: inset 0px -5px 15px rgba(179, 179, 179, 0.51);
+  position: relative;
+  top: -190px;
 }
