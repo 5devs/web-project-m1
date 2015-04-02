@@ -3,10 +3,17 @@
 }
 
 html {
-  font-family: Raleway, calibri, sans-serif;
   font-size: 16px;
   cursor: default;
 }
+
+body,
+input,
+select,
+textarea {
+  font-family: Raleway, calibri, sans-serif;
+}
+
 
 input,
 textarea,
@@ -25,6 +32,8 @@ header#user-controls {
 
   background: #9a009a;
   height: 60px;
+  
+  padding: 0 1em;
 }
 
 header#user-controls,
@@ -70,7 +79,9 @@ header#user-controls #login {
 header#user-controls button,
 header#user-controls a,
 .button {
-  background-color: transparent;
+  background-color: #9a009a;
+  color: #fff;
+  
   border: none;
   padding: .5em 1em;
   cursor: pointer;
@@ -156,4 +167,44 @@ header#user-controls form.invalid {
   header#user-controls form.invalid input:hover,
   header#user-controls form.invalid input:focus {
     background-color: #fdd;
+  }
+ 
+  header#user-controls .toggle-menu {
+    display: none;
+  }
+  
+  @media screen and (max-width: 500px) {
+      header#user-controls .toggle-menu {
+          display: block;
+      }
+      
+      header#user-controls ul#main-menu {
+          width: 100%;
+      }
+      
+      header#user-controls ul#main-menu li {
+          display: block;
+          width: 100%;
+      }
+      
+      header#user-controls .logado,
+      header#user-controls .deslogado {
+        background-color: #9a009a;
+        width: 100%;
+        text-align: center;
+      }
+      
+    header#user-controls .group,
+    header#user-controls .group input {
+        width: 100%;
+        display: block;
+        margin: 0;
+    }
+      
+    header#user-controls .group label {
+        margin: 0;
+        line-height: 1;
+        display: block;
+        padding-bottom: .2em;
+    }
   }

@@ -29,11 +29,15 @@
         %>
 
         <article>
-            <header id="app-header"></header>
+            <header id="app-header">
+                <h1>Frete Planejado</h1>
+            </header>
 
-            <div id="content"></div>
-
-            <img src="/FretePlanejado/content/img/bg.jpg" class="bg-app">
+            <div id="content">
+                <div class="blank-slate">
+                    Sem Fretes
+                </div>
+            </div>
         </article>
     </body>
 </html>
