@@ -12,10 +12,15 @@
     <div class="header-content">
         <!-- MENU --> 
         <ul id="main-menu">
-            <li><a href="/FretePlanejado">Home</a></li>
-            <li><a href="#">Fretes</a></li>
-            <li><a href="#">Calendário</a></li>
-            <li><a href="/FretePlanejado/contato.jsp">Contato</a></li>
+            <li>
+                <a href="/FretePlanejado">Home</a>
+            </li><li>
+                <a href="#">Fretes</a>
+            </li><li>
+                <a href="#">Calendário</a>
+            </li><li>
+                <a href="/FretePlanejado/contato.jsp">Contato</a>
+            </li>
         </ul>
         <!-- /MENU -->
 
@@ -34,10 +39,10 @@
                     <input id="senha" name="Senha" type="password">
                 </div>
 
-              <button id="login" class="button">Log In</button>
-            </form>
+              <button id="login" type="submit">Log In</button>
 
-            <button id="signup" class="button">Registrar</button>
+              <button id="signup" type="button">Registrar</button>
+            </form>
           </div>
         <%
           if(session.getAttribute("Erro") != null)

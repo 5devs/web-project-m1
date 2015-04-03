@@ -3,7 +3,7 @@ html {
     font-size: 25px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   html {
   	font-size: 20px;
   }
@@ -101,7 +101,7 @@ section .showcase-image img {
   font-weight: 200;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .download-buttons a {
     display: block;
   }

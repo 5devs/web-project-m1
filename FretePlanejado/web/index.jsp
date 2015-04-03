@@ -8,14 +8,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <jsp:include page="inc/head_content.jsp" />
+        
         <title>Frete Planejado</title>
 
-        <link href='http://fonts.googleapis.com/css?family=Raleway:700,100,400,200,300' rel='stylesheet' type='text/css'>
         <link href="bower_components/jquery.onepage-scroll/dist/jquery.onepage-scroll.css" rel="stylesheet"/>
-        <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet"/>
-
-        <link rel="stylesheet" type="text/css" href="content/css/base.css">
         <link rel="stylesheet" type="text/css" href="content/css/main.css">
     </head>
     <body>
@@ -105,8 +102,8 @@
         </div>
 
 
+        <jsp:include page="inc/scripts.jsp" />
         <script src="bower_components/modernizr/modernizr.js" rel="stylesheet"></script>
-        <script src="bower_components/jquery/jquery.min.js" rel="stylesheet"></script>
         <script src="bower_components/jquery.onepage-scroll/dist/jquery.onepage-scroll.min.js" rel="stylesheet"/></script>
-        <script src="content/js/main.js"></script>
+        <script src="content/js/one-page-scroll.js"></script>
 </html>
