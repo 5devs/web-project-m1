@@ -3,20 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package com.freteplanejado.servlet;
 
+import com.freteplanejado.data.UserDAO;
+import com.freteplanejado.entity.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Gabriel Malaquias
+ * @author 43596980895
  */
-public class ContatoPost extends HttpServlet {
+@WebServlet(name = "Teste", urlPatterns = {"/Teste"})
+public class Teste extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,13 +39,25 @@ public class ContatoPost extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ContatoPost</title>");            
+            out.println("<title>Servlet Teste</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ContatoPost at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet Teste at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
+        
+        Usuario u = new Usuario();
+        u.setName("admin");
+        u.setEmail("admin@freteplanejado.com");
+        u.setPassword("123456");
+        
+        UserDAO dao = new UserDAO();
+        dao.create(u);
+        
+        dao.retrieve(u.getId());
+        u.setPassword("abc");
+        dao.update(u);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -70,9 +86,7 @@ public class ContatoPost extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       HttpSession session = request.getSession(true);
-       session.setAttribute("sucess", "1");
-       response.sendRedirect("/FretePlanejado/contato.jsp");
+        processRequest(request, response);
     }
 
     /**

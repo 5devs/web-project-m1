@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package com.freteplanejado.servlet;
 
+import com.freteplanejado.entity.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -77,9 +74,9 @@ public class Login extends HttpServlet {
         
         HttpSession session = request.getSession(true);
         if(usuario.Logar(Login, Senha)){
-            session.setAttribute("Login", usuario.getLogin());
+            session.setAttribute("Login", usuario.getEmail());
             session.setAttribute("Senha", usuario.getSenha());
-            session.setAttribute("Logado", usuario.getLogado());
+            session.setAttribute("Logado", true);
             response.sendRedirect("/FretePlanejado/app.jsp"); 
         }else{
             session.setAttribute("Erro", "Usuario e/ou Senha Inválidos");
