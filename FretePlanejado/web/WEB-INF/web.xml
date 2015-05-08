@@ -2,11 +2,11 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>Login</servlet-name>
-        <servlet-class>Login</servlet-class>
+        <servlet-class>com.freteplanejado.servlet.Login</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Logout</servlet-name>
-        <servlet-class>Logout</servlet-class>
+        <servlet-class>com.freteplanejado.servlet.Logout</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Contato</servlet-name>
@@ -18,7 +18,11 @@
     </servlet>
     <servlet>
         <servlet-name>ContatoPost</servlet-name>
-        <servlet-class>ContatoPost</servlet-class>
+        <servlet-class>com.freteplanejado.servlet.ContatoPost</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegistroUsuario</servlet-name>
+        <servlet-class>com.freteplanejado.servlet.RegistroUsuario</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>ContatoPost</servlet-name>
         <url-pattern>/ContatoPost</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistroUsuario</servlet-name>
+        <url-pattern>/RegistroUsuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

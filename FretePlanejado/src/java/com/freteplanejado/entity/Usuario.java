@@ -13,17 +13,6 @@ public class Usuario {
     private String email;
     private String password;
     
-    public boolean Logar(String Login, String Senha){
-        if("admin".equals(Login) && "admin".equals(Senha)){
-            this.email = Login;
-            this.password = Senha;
-        
-            return true;
-        }
-        
-        return false;
-    }
-    
     public int getId() {
         return id;
     }

@@ -3,9 +3,24 @@
 }
 
 html {
-  font-size: 16px;
   cursor: default;
+  font-family: Raleway, calibri, sans-serif;
+  font-size: 25px;
 }
+
+
+@media screen and (max-width: 750px) {
+  html {
+  	font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+  	font-size: 30px;
+  }
+}
+
 
 body,
 input,
@@ -274,4 +289,42 @@ header#user-controls form.invalid {
         display: block;
         width: 100%;
     }
+}
+
+h1,
+h2 {
+    margin: 0;
+    font-weight: 500;
+}
+
+article {
+  padding: 1em;
+}
+
+article form label {
+  display: inline-block;
+  
+  min-width: 100%;
+  margin-top: .5em;
+
+  font-size: .8em;
+  font-variant: small-caps;
+}
+
+article form {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+article form input, 
+article form textarea, 
+article form select {
+  width: 100%;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+article form input[type=submit] {
+    margin-top: 10px;
 }

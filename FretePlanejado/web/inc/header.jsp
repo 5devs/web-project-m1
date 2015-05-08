@@ -4,6 +4,8 @@
     Author     : Gabriel Malaquias
 --%>
 
+<%@page import="com.freteplanejado.servlet.filter.Autenticacao"%>
+<%@page import="com.freteplanejado.entity.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <header id="user-controls">
     
@@ -24,7 +26,9 @@
         </ul>
         <!-- /MENU -->
 
-        <% if(session.getAttribute("Logado") == null) { %>
+        <% 
+          Usuario user =  Autenticacao.getLoggedUser(request);
+    if(user == null) { %>
           <div class="deslogado">
             <form id="login-form" action="/FretePlanejado/Login"
               class="<%=(session.getAttribute("Erro") != null) ? "invalid" : "" %>"
@@ -41,7 +45,7 @@
 
               <button id="login" type="submit">Log In</button>
 
-              <button id="signup" type="button">Registrar</button>
+              <a href="/FretePlanejado/registrar.jsp" id="signup" type="button">Registrar</a>
             </form>
           </div>
         <%
@@ -50,8 +54,8 @@
         } else {
         %>
           <div class="logado">
-            <span id="username-display"><img src="/FretePlanejado/content/img/avatar.png" /> Olá, Administrador!</span>
-            <a href="/FretePlanejado/app.jsp" class="button" id="app">Painel</a>
+              <span id="username-display"><img src="/FretePlanejado/content/img/avatar.png" /> Olá, <%  out.print(user.getName()); %>!</span>
+            <a href="/FretePlanejado/Painel" class="button" id="app">Painel</a>
             <a href="/FretePlanejado/Logout" class="button" id="logout">Log Out</a>
           </div>
         <% } %>

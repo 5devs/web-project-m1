@@ -1,6 +1,9 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.freteplanejado.servlet;
-
-
 
 import com.freteplanejado.data.UserDAO;
 import com.freteplanejado.entity.Usuario;
@@ -14,9 +17,9 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author 42143954840
+ * @author 43596980895
  */
-public class Login extends HttpServlet {
+public class RegistroUsuario extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,10 +38,10 @@ public class Login extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Login</title>");            
+            out.println("<title>Servlet RegistroUsuario</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Login at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet RegistroUsuario at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -71,23 +74,15 @@ public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        Usuario usuario = new Usuario();
-        
-        String Login = request.getParameter("Login");
-        String Senha = request.getParameter("Senha");
         HttpSession session = request.getSession(true);
         
         UserDAO ud = new UserDAO();
         
-        usuario = ud.getByEmailAndPassword(Login, Senha);
         
-        if(usuario != null){
-            session.setAttribute("usuario", usuario);
-            response.sendRedirect("/FretePlanejado/Painel"); 
-        }else{
-            session.setAttribute("Erro", "Usuario e/ou Senha Inválidos");
-            response.sendRedirect("/FretePlanejado");
-        }
+        
+        session.setAttribute("msg", "Mensagem");
+        
+        processRequest(request, response);
     }
 
     /**

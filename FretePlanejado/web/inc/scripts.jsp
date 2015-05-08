@@ -5,5 +5,5 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<script src="bower_components/jquery/jquery.min.js" rel="stylesheet"></script>
-<script src="content/js/main.js"></script>
+<script src="/FretePlanejado/bower_components/jquery/jquery.min.js" rel="stylesheet"></script>
+<script src="/FretePlanejado/content/js/main.js"></script>

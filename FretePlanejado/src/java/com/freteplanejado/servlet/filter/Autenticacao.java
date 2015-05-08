@@ -1,6 +1,5 @@
 package com.freteplanejado.servlet.filter;
 
-import com.freteplanejado.data.UserDAO;
 import com.freteplanejado.entity.Usuario;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -13,8 +12,11 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-@WebFilter(filterName = "Autenticacao", urlPatterns = {"/*"})
+@WebFilter(filterName = "Autenticacao", urlPatterns = {"/Painel/*"})
 public class Autenticacao implements Filter {
     
     private static final boolean debug = true;
@@ -101,7 +103,19 @@ public class Autenticacao implements Filter {
         
         Throwable problem = null;
         try {
+            
+            /*FILTRO*/           
+            HttpServletResponse httpResponse = (HttpServletResponse) response;
+            HttpServletRequest httpRequest = (HttpServletRequest) request;
+            
+            HttpSession session = httpRequest.getSession(true);
+            
+            if(Autenticacao.getLoggedUser(httpRequest) == null){
+                httpResponse.sendRedirect("/FretePlanejado/index.jsp");
+            }
+            
             chain.doFilter(request, response);
+            
         } catch (Throwable t) {
 	    // If an exception is thrown somewhere down the filter chain,
             // we still want to execute our after processing, and then
@@ -219,6 +233,17 @@ public class Autenticacao implements Filter {
     
     public void log(String msg) {
         filterConfig.getServletContext().log(msg);        
+    }
+    
+    public static Usuario getLoggedUser(HttpServletRequest request){
+        HttpSession session = request.getSession(true);
+        
+        Object user = session.getAttribute("usuario");
+        
+        if(user == null)
+            return null;
+        
+        return (Usuario) user;
     }
     
 }

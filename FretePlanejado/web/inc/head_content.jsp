@@ -9,6 +9,6 @@
 <meta name="viewport" content="width=device-width" />
 
 <link href='http://fonts.googleapis.com/css?family=Raleway:700,100,400,200,300' rel='stylesheet' type='text/css'>
-<link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+<link href="/FretePlanejado/bower_components/font-awesome/css/font-awesome.css" rel="stylesheet"/>
 
-<link rel="stylesheet" type="text/css" href="content/css/base.css">
+<link rel="stylesheet" type="text/css" href="/FretePlanejado/content/css/base.css">

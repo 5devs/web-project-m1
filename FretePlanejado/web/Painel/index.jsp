@@ -8,24 +8,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <jsp:include page="inc/head_content.jsp" />
+        <jsp:include page="/inc/head_content.jsp" />
 
         <title>Frete Planejado</title>
         
-        <link rel="stylesheet" type="text/css" href="content/css/app.css">
+        <link rel="stylesheet" type="text/css" href="/FretePlanejado/content/css/app.css">
     </head>
     <body>
         <!-- HEADER -->
-        <jsp:include page="inc/header.jsp" />
+        <jsp:include page="/inc/header.jsp" />
         <!-- /HEADER -->
-        
-        <%
-        //validador de session
-        if(session.getAttribute("Logado") == null)
-          response.sendRedirect("/FretePlanejado");
-        %>
 
-        <article>
+        <article id="fretes">
             <header id="app-header">
                 <h1>Frete Planejado</h1>
             </header>
@@ -37,6 +31,6 @@
             </div>
         </article>
         
-        <jsp:include page="inc/scripts.jsp" />
+        <jsp:include page="/inc/scripts.jsp" />
     </body>
 </html>

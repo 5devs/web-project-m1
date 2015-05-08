@@ -1,222 +1,165 @@
-html {
-    font-family: Raleway, calibri, sans-serif;
-    font-size: 25px;
-}
 
-@media screen and (max-width: 750px) {
-  html {
-  	font-size: 20px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  html {
-  	font-size: 30px;
-  }
-}
 
 section {
-  padding: 100px 25px;
-  
-  /*background-color: #ffc04d;*/
-  transition: background-color .3s linear;
+    padding: 100px 25px;
 
-  background: #ffc04d; /* Old browsers */
-  background: -moz-linear-gradient(left,  #ffc04d 0%, #ffae1a 40%, #ff6500 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffc04d), color-stop(40%,#ffae1a), color-stop(100%,#ff6500)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left,  #ffc04d 0%,#ffae1a 40%,#ff6500 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left,  #ffc04d 0%,#ffae1a 40%,#ff6500 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left,  #ffc04d 0%,#ffae1a 40%,#ff6500 100%); /* IE10+ */
-  background: linear-gradient(to right,  #ffc04d 0%,#ffae1a 40%,#ff6500 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc04d', endColorstr='#ff6500',GradientType=1 ); /* IE6-9 */
+    /*background-color: #ffc04d;*/
+    transition: background-color .3s linear;
+
+    background: #ffc04d; /* Old browsers */
+    background: -moz-linear-gradient(left,  #ffc04d 0%, #ffae1a 40%, #ff6500 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffc04d), color-stop(40%,#ffae1a), color-stop(100%,#ff6500)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #ffc04d 0%,#ffae1a 40%,#ff6500 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #ffc04d 0%,#ffae1a 40%,#ff6500 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #ffc04d 0%,#ffae1a 40%,#ff6500 100%); /* IE10+ */
+    background: linear-gradient(to right,  #ffc04d 0%,#ffae1a 40%,#ff6500 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc04d', endColorstr='#ff6500',GradientType=1 ); /* IE6-9 */
 }
 
 section.active {
-  /*background-color: #FA0;*/
-}
-
-h1,
-h2 {
-  margin: 0;
-  font-weight: 500;
+    /*background-color: #FA0;*/
 }
 
 article {
-  margin-top: 60px;
+    margin-top: 60px;
 }
 
 section p {
-  font-weight: 100;
-  padding: 0;
+    font-weight: 100;
+    padding: 0;
 }
 
 section .conteudo,
 section .showcase-image {
-  width: 49%;
-  display: inline-block;
+    width: 49%;
+    display: inline-block;
 }
 
 section .showcase-image {
-  position: absolute;
-  top: 20%;
+    position: absolute;
+    top: 20%;
 }
 
 section .showcase-image img {
-  max-width: 100%;
-  border-radius: 5px;
+    max-width: 100%;
+    border-radius: 5px;
 
-  transition: margin 1s linear;
-  right: 0;
+    transition: margin 1s linear;
+    right: 0;
 }
 
 .entrecontato{
-  background: #9a009a;
-  padding: 15px;
-  color:#fff;
+    background: #9a009a;
+    padding: 15px;
+    color:#fff;
 }
 
 .download-buttons a {
-  display: inline-block;
-  padding: 0.7em 0.6em;
-  margin: 5px;
+    display: inline-block;
+    padding: 0.7em 0.6em;
+    margin: 5px;
 
-  border: 5px solid;
+    border: 5px solid;
 
-  border-radius: 10px;
-  border: 5px solid;
+    border-radius: 10px;
+    border: 5px solid;
 
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px #111;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #111;
 
-  transition: box-shadow .3s linear;
-  
-  font-size: 0.8em;
+    transition: box-shadow .3s linear;
+
+    font-size: 0.8em;
 }
 
 .download-buttons p {
-  font-size: 1.2em;
-  width: 100%;
-  font-weight: 200;
+    font-size: 1.2em;
+    width: 100%;
+    font-weight: 200;
 }
 
 @media screen and (max-width: 750px) {
-  .download-buttons a {
-    display: block;
-  }
+    .download-buttons a {
+        display: block;
+    }
 }
 
 .download-buttons a .fa {
-  padding-right: 5px;
+    padding-right: 5px;
 }
 
 .download-buttons a.android {
-  background: #a4c639;
-  border-color: #738b28;
+    background: #a4c639;
+    border-color: #738b28;
 }
 
 .download-buttons a.windows-phone {
-  background: #68217a;
-  border-color: #35113e;
+    background: #68217a;
+    border-color: #35113e;
 }
 
 .download-buttons a.ios {
-  background: #8e8e93;
-  border-color: #68686d;
+    background: #8e8e93;
+    border-color: #68686d;
 }
 
 .download-buttons a:hover {
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, .4);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .4);
 }
 
 .download-buttons a:active {
-  box-shadow: none;
-  transition: box-shadow .1s linear;
+    box-shadow: none;
+    transition: box-shadow .1s linear;
 }
 
 #apresentacao .showcase-image {
-  text-align: center;
+    text-align: center;
 }
 
 #rastreamento .mapa {
-  transition: margin-top 1s linear, box-shadow 1s linear;
+    transition: margin-top 1s linear, box-shadow 1s linear;
 }
 
 #rastreamento.active .mapa {
-  margin-top: -70px;
-  box-shadow: 0 0 20px rgba(0,0,0,.3);
+    margin-top: -70px;
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
 }
 
-#para-transportadoras-intro .caminhao {
-  /*filter: FlipH;
-  -ms-filter: "FlipH";
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);*/
-}
-
-  #para-transportadoras-intro.active .caminhao {
+#para-transportadoras-intro.active .caminhao {
     margin-right: 70px;
-  }
+}
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 #username-display{
-  color:#fff;
+    color:#fff;
 }
 
 #redes-sociais {
-  padding: 0;
-  margin: 0;
-  font-size: 2em;
-  /*text-align: center;*/
+    padding: 0;
+    margin: 0;
+    font-size: 2em;
+    /*text-align: center;*/
 }
 
 #redes-sociais li {
-  padding: 0;
-  display: inline-block;
+    padding: 0;
+    display: inline-block;
 }
 
-  #redes-sociais .fa-twitter {
+#redes-sociais .fa-twitter {
     color: #55acee;
-  }
+}
 
-  #redes-sociais .fa-facebook {
+#redes-sociais .fa-facebook {
     color: #3b5998;
-  }
+}
 
-  #redes-sociais .fa-youtube {
+#redes-sociais .fa-youtube {
     color: #e52d27;
-  }
-
-article#contato {
-  padding: 1em;
 }
 
-article#contato form label {
-  display: inline-block;
-  
-  min-width: 100%;
-  margin-top: .5em;
-
-  font-size: .8em;
-  font-variant: small-caps;
-}
-
-article#contato form input, 
-article#contato form textarea, 
-article#contato form select {
-  width: 100%;
-  margin: 0;
-  padding: 5px 10px;
-}
-
-article#contato form {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-}
