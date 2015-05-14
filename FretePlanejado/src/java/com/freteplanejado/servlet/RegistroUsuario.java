@@ -38,7 +38,7 @@ public class RegistroUsuario extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet RegistroUsuario</title>");            
+            out.println("<title>Servlet RegistroUsuario</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet RegistroUsuario at " + request.getContextPath() + "</h1>");
@@ -73,16 +73,56 @@ public class RegistroUsuario extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         HttpSession session = request.getSession(true);
-        
+
         UserDAO ud = new UserDAO();
-        
-        
-        
-        session.setAttribute("msg", "Mensagem");
-        
-        processRequest(request, response);
+
+        String nome = request.getParameter("Nome");
+        String email = request.getParameter("Email");
+        String password = request.getParameter("Password");
+        String repassword = request.getParameter("RePassword");
+
+        if (nome.equals("")) {
+            addError(request, "Campo nome é obrigatório!");
+        }
+
+        if (email.equals("")) {
+            addError(request, "Campo email é obrigatório!");
+        } else if(ud.getByEmail(email)!= null) {
+            addError(request, "Usuário já cadastrado!");
+        }
+
+        if (!password.equals(repassword)) {
+            addError(request, "Passwords diferentes!");
+        }
+        if (session.getAttribute("message") == null) {
+            ud.create(new Usuario(nome, email, password));
+
+            sendResponse(request, true, "Usuário cadastrado com sucesso!");
+        }
+
+        response.sendRedirect("/FretePlanejado/registrar.jsp");
+    }
+
+    public void sendResponse(HttpServletRequest request, boolean success, String msg) {
+        HttpSession session = request.getSession(true);
+
+        session.setAttribute("success", success);
+        session.setAttribute("message", msg);
+    }
+
+    public void addError(HttpServletRequest request, String msg) {
+        HttpSession session = request.getSession(true);
+
+        session.setAttribute("success", false);
+        String message = (String) session.getAttribute("message");
+        if (message == null) {
+            message = msg;
+        } else {
+            message = message + "@" + msg;
+        }
+        session.setAttribute("message", message);
     }
 
     /**
