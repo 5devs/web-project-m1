@@ -24,6 +24,10 @@
         <servlet-name>RegistroUsuario</servlet-name>
         <servlet-class>com.freteplanejado.servlet.RegistroUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegistroFrete</servlet-name>
+        <servlet-class>com.freteplanejado.servlet.RegistroFrete</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>RegistroUsuario</servlet-name>
         <url-pattern>/RegistroUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistroFrete</servlet-name>
+        <url-pattern>/RegistroFrete</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

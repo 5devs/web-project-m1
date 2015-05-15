@@ -19,6 +19,21 @@ public class Frete {
     private float peso;
     private String observacoes;
 
+    public Frete() {
+    }
+
+    public Frete(String origem, String destino, float altura, float largura, float profundidade, float peso, String observacoes) {
+        this.origem = origem;
+        this.destino = destino;
+        this.altura = altura;
+        this.largura = largura;
+        this.profundidade = profundidade;
+        this.peso = peso;
+        this.observacoes = observacoes;
+    }
+    
+    
+
     public int getId() {
         return id;
     }

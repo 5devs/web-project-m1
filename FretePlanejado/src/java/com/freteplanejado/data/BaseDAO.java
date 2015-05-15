@@ -4,8 +4,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 public abstract class BaseDAO<T> {
+    public abstract List<T> all();
 
     public abstract void create(T entity);
 
@@ -14,6 +16,8 @@ public abstract class BaseDAO<T> {
     public abstract void update(T entity);
 
     public abstract boolean delete(int id);
+
+    public abstract T load(ResultSet source) throws SQLException;
 
     public int executeInsert(String sql, Object... params) throws SQLException {
         PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement(sql,
