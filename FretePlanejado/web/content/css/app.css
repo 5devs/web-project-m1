@@ -5,8 +5,48 @@ body {
 }
 
 article#fretes {
-    background: #eee;
-    padding: 0;
+}
+
+article#fretes #listadefretes ul {
+    list-style: none;
+    padding: 0; 
+}
+
+article#fretes #listadefretes ul div {
+    padding-top: 5px;
+}
+
+article#fretes table  {
+    font-size: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+article#fretes table th,
+article#fretes table td  {
+    border: 1px solid #f4f4f4;
+    padding: .2em .5em;
+}
+
+article#fretes .actions  {
+    text-align: center;
+}
+article#fretes .actions .button {
+  padding: .3em;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+article#fretes .more-info {
+    display: none;
+}
+
+article#fretes #listadefretes ul label {
+    font-weight: bold;
+}
+
+article#fretes #listadefretes ul p {
+    display: inline;
 }
 
 header#app-header {

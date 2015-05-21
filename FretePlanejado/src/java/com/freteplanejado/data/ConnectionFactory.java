@@ -14,7 +14,7 @@ public class ConnectionFactory {
             try
             {
                 Class.forName("com.mysql.jdbc.Driver");
-                String url = "jdbc:mysql://localhost:3306/" + dbName;
+                String url = "jdbc:mysql://localhost:3306/" + dbName + "?useUnicode=true&characterEncoding=UTF-8&character_set_server=utf8mb4";
                 ConnectionFactory.connection = DriverManager.getConnection(url, dbUser, dbPass);
             }
             catch(Exception e)

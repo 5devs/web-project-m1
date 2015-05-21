@@ -63,7 +63,13 @@ public class FreteDAO extends BaseDAO<Frete>{
 
     @Override
     public boolean delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            executeUpdate("DELETE FROM fretes WHERE id = ?", id);
+            return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
     }
 
     @Override
